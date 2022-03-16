@@ -1,0 +1,59 @@
+#include <stdio.h>
+
+int main(void) {
+
+  int opcion=1, num;
+
+  while(opcion!=5){
+    printf("\n**** LISTA DE NÚMEROS ****\n\n");
+    printf("1. Números del 1 al 50\n");
+    printf("2. Números del 50 al 1\n");
+    printf("3. Números pares del 0 al 20\n");
+    printf("4. Números impares del 1 al 20\n");
+    printf("5. Salir del programa\n");
+    printf("Elige una opción (1-5): ");
+    scanf("%i", &opcion);
+
+    switch(opcion){
+      case 1:
+        printf("\n1. Números del 1 al 50\n");
+        num=1;
+        while(num<=50){
+          printf("%i\n", num);
+          num++;
+        }
+        break;
+      case 2:
+        printf("\n2. Números del 50 al 1\n");
+        num=50;
+        while(num>=1){
+          printf("%i\n", num);
+          num--;
+        }
+        break;
+      case 3:
+        printf("\n3. Números pares del 0 al 20\n");
+        num=0;
+        while(num<=20){
+          printf("%i\n", num);
+          num+=2;
+        }
+        break;
+      case 4:
+        printf("\n4. Números impares del 1 al 20\n");
+        num=1;
+        while(num<=20){
+          printf("%i\n", num);
+          num+=2;
+        }
+        break;
+      case 5:
+        printf("\n5. Saliste del programa\n");
+        break;
+      default:
+        printf("\nOpcion incorrecta (1-5)\n");
+    }
+  }
+  
+  return 0;
+}
